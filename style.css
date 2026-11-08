@@ -1,0 +1,245 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 16px;
+}
+body {
+    background-color: #fffaf3;
+    color: #44352c;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+header {
+    background-color: #8b5e3c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    color: #8b5e3c;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+main {
+    width: 90%;
+    max-width: 1100px;
+    min-height: 70vh;
+    margin: 0 auto;
+    padding: 20px;
+}
+section {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border: 1px solid #d6b99e;
+    border-radius: 0.625rem;
+    min-height: 60vh;
+}
+.products-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 280px;
+    max-width: 100%;
+    flex: 0 1 280px;
+    margin: 0;
+    background-color: #f3dfc8;
+    border: 2px solid #b68b68;
+    border-radius: 12px;
+    position: relative;
+    padding: 45px 20px 60px;
+}
+.product h3 {
+    color: #70452c;
+    font-size: 22px;
+}
+.product a {
+    display: inline-block;
+    width: 120px;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #a66b43;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+    position: static;
+    top: 20px;
+    left: 20px;
+}
+/* Static პოზიციონირებისას top და left არ მოქმედებს, რადგან ელემენტი ჩვეულებრივ დოკუმენტის ნაკადში რჩება. */
+.product:nth-child(2) {
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+.product:nth-child(3) {
+    position: relative;
+    top: -10px;
+    left: 10px;
+}
+.product button {
+    width: 120px;
+    font-size: 1rem;
+    padding: 0.6em 1.2em;
+    background-color: #a66b43;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.product button:hover {
+    background-color: #70452c;
+}
+.badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: #a66b43;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.product-name {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #8b5e3c;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+}
+.about-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.about-text {
+    width: 60%;
+    padding: 20px;
+}
+.about-info {
+    width: 40%;
+    min-height: 30vh;
+    font-size: 1rem;
+    background-color: #f3dfc8;
+    padding: 20px;
+    border-radius: 12px;
+}
+.about-info p {
+    font-size: 1.5em;
+}
+/* შიდა ტექსტი იზრდება მოსალოდნელზე მეტად, რადგან em ზომა მშობელი ელემენტის შრიფტის ზომიდან გამოითვლება და ზომები ერთმანეთზე მრავლდება. */
+footer {
+    background-color: #44352c;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+footer a {
+    color: #ffd6a5;
+    margin: 10px;
+}
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #8b5e3c;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1000;
+}
+.back-to-top:hover {
+    background-color: #70452c;
+}
+.overlap-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+}
+.overlap-card {
+    position: relative;
+    width: 280px;
+    min-height: 220px;
+    padding: 25px;
+    border-radius: 12px;
+    background-color: #f3dfc8;
+    border: 2px solid #8b5e3c;
+    text-align: center;
+    flex-shrink: 0;
+}
+.card-1 {
+    top: 65px;
+    left: 40px;
+    z-index: 1;
+    padding-right: 65px;
+}
+.card-2 {
+    top: -45px;
+    left: 0;
+    z-index: 3;
+    background-color: #b68b68;
+}
+.card-3 {
+    top: 65px;
+    left: -40px;
+    z-index: 2;
+    padding-left: 65px;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    pointer-events: none;
+}
